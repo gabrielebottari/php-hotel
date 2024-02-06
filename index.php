@@ -124,15 +124,14 @@
                     </div>
                 </div>
             </form>
-
+            
+            <!-- ucfirst come textcapitalize -->
             <table class="table table-info table-bordered border-success table-striped-columns table-hover text-success">
                 <thead>
                     <tr>
-                        <th class="text-success">Nome</th>
-                        <th class="text-success">Descrizione</th>
-                        <th class="text-success">Parcheggio</th>
-                        <th class="text-success">Stelle</th>
-                        <th class="text-success">Distanza dal centro</th>
+                        <?php foreach ($filteredHotels[0] as $key => $value): ?>
+                            <th class="text-success"><?php echo ucfirst($key); ?></th>
+                        <?php endforeach; ?>
                     </tr>
                 </thead>
                 <tbody>
